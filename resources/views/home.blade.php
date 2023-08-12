@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Administración</div>
+                <div class="panel-heading">Welcome to the Administration</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -13,20 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Bienvenido
-
                 
 			   <div class="link">
-                   <a href=" {{Route('client.index') }} ">Clientes</a>
+                   <a href=" {{Route('client.index') }} ">Customers</a>
 				   <br>
-				   <a href=" {{Route('food.index') }} ">Almacen General</a>  
+				   <a href=" {{Route('food.index') }} ">General Storehouse</a>  
 				   <br>
-				   <a href=" {{Route('production.index') }} ">Producción</a>  
+				   <a href=" {{Route('production.index') }} ">Production</a>  
                    <br>
-                   <a href=" {{Route('recipe') }} ">Recetas</a>
+                   <a href=" {{Route('recipe') }} ">Recipes</a>
                    <br>
-                   <a href=" {{Route('kitchen') }} ">Cocina</a>  
+                   <a href=" {{Route('kitchen') }} ">Kitchen</a>  
                 </div>
                 </div>
             </div>

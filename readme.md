@@ -1,51 +1,114 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Project Title
 
-## About Laravel
+Restaurant Kitchen Management System
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Authors
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [@gabrielcarrillosoftware](https://github.com/gabrielcarrillosoftware)
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
-## Learning Laravel
+## Tech Stack
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+**Client:**  Vuejs 2, Blade, Jquery, Css, Html
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+**Server:** PHP 7, Laravel 5.5
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+## Installation
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+Install my-project with these commands, you need to be insade of the folder of the project:
+```bash
+  composer install 
+  php artisan generate:key
+```
+You need to create a database called `kitchedb` in your database management software, in my case I used mysql with phpmyadmin.
 
-## Contributing
+Next you need to create an `.env` file and write the values ​​found in the next section    
+## Environment Variables
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+To run this project, you will need to add the following environment variables to your .env file
 
-## Security Vulnerabilities
+`APP_NAME=Restaurant`
+`APP_ENV=local`
+`APP_KEY=base64:+S1VrY+9xy7rqrRIALD9HY8V3v/zmGWVq9O3FczZSEU=`
+`APP_DEBUG=true`
+`APP_LOG_LEVEL=debug`
+`APP_URL=http://localhost`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+`DB_CONNECTION=mysql`
+`DB_HOST=127.0.0.1`
+`DB_PORT=3306`
+`DB_DATABASE=kitchendb`
+`DB_USERNAME=root`
+`DB_PASSWORD=`
+
+`BROADCAST_DRIVER=log`
+`CACHE_DRIVER=file`
+`SESSION_DRIVER=file`
+`QUEUE_DRIVER=sync`
+
+`REDIS_HOST=127.0.0.1`
+`REDIS_PASSWORD=null`
+`REDIS_PORT=6379`
+
+`MAIL_DRIVER=smtp`
+`MAIL_HOST=smtp.mailtrap.io`
+`MAIL_PORT=2525`
+`MAIL_USERNAME=null`
+`MAIL_PASSWORD=null`
+`MAIL_ENCRYPTION=null`
+
+`PUSHER_APP_ID=`
+`PUSHER_APP_KEY=`
+`PUSHER_APP_SECRET=`
+
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  php artisan serve
+```
+
+You can login with the following test user:
+
+User: gabrielcarrillosoftware@gmail.com
+Password: admin
+## Screenshots
+
+- Home 
+![img](1.png)
+
+-
+![img](2.png)
+
+-
+![img](3.png)
+
+-
+![img](4.png)
+
+-
+![img](5.png)
+
+-
+![img](6.png)
+
+-
+![img](7.png)
+
+- Entity Relationship Diagram
+![img](entity-relationship-diagram.png)
+
+
+## 🛠 Skills
+PHP, Laravel, Javascript, HTML, CSS, VueJs, Bootstrap 3...
+
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+[MIT](https://choosealicense.com/licenses/mit/)
+

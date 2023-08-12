@@ -5,19 +5,20 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-1">
             <div class="panel panel-default">
+				<a href=" {{Route('home') }} " class="btn btn-info pull-right">Return</a>
                   
-		  <a href=" {{Route('client.create') }} " class="btn btn-primary pull-right">Nuevo</a>
-	            <h2>Listado de Clientes</h2>
+		  <a href=" {{Route('client.create') }} " class="btn btn-primary pull-right">+ Add</a>
+	            <h2>Customers List</h2>
 	            
 				@include('client.partials.info')
 		      <table class="table table-hover table-striped" >
 			   <thead>
 			    <tr>
-			      <th>Cedula</th>
-				   <th>Nombre y Apellido</th>
-				    <th>Direccion</th>
-					 <th>Telefono</th>
-					  <th colspan="2">Acciones</th>
+			      <th>DNI</th>
+				   <th>Full Name</th>
+				    <th>Address</th>
+					 <th>Phone Number</th>
+					  <th colspan="2">Actions</th>
 			    </tr>
 			   </thead>
 			   <tbody>
@@ -28,13 +29,13 @@
 				     <td> {{ $client->address }} </td>
 				     <td> {{ $client->phone }} </td>	
 					 
-           		     <td> <a class="btn btn-link" href=" {{Route('client.edit',$client->ci) }} ">Editar</a> </td>
+           		     <td> <a class="btn btn-link" href=" {{Route('client.edit',$client->ci) }} ">Edit</a> </td>
 				     <td> 
                       <form action="{{Route('client.destroy',$client->ci) }} " method="POST">
 						    
 						  {{ csrf_field() }}
 					   <input type="hidden" name="_method" value="DELETE">
-					   <button class="btn btn-link">Eliminar</button>
+					   <button class="btn btn-link">Delete</button>
 					  </form>
 					 </td>
 			

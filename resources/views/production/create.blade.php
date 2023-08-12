@@ -7,7 +7,7 @@
 	
         <div class="col-md-8 col-md-offset-1">
 			@include('food.partials.error')
-		    <a href=" {{Route('production.index') }} " class="btn btn-info pull-right">Regresar</a>
+		    <a href=" {{Route('production.index') }} " class="btn btn-info pull-right">Return</a>
             <div class="panel panel-default">
 			<br><br>
               <form action="{{Route('production.process') }}" method="POST" class="">
@@ -16,7 +16,7 @@
 			
 				
 			    <div class="form-group">
-			   <label for="idFood">Alimento:</label>
+			   <label for="idFood">Food:</label>
 			  
                <select v-model="idfood" v-on:change="checkWeight(idfood)" name="idFood" class="form-control">
 			   @foreach($foods as $food)
@@ -26,13 +26,13 @@
                    </div>
 				
 				 <div class="form-group">
-				 <label>Peso actual en Almacen:</label>
-				  @{{weight}} Gramos
+				 <label>Current Weight in Warehouse:</label>
+				  @{{weight}} Grams
 					
 				</div>
 				
 				 <div class="form-group">
-				 <label for="weightProduction">Cantidad que va a Producción:</label>
+				 <label for="weightProduction">Quantity going to production:</label>
 				 <input type="number" name="weightProduction" class="form-control" required/>
 				</div>
 				@{{typeFood}} 
@@ -42,7 +42,7 @@
 				</div>
 				
 				 <div class="form-group col-lg-offset-5">
-				 <input  type="submit" class="btn btn-lg btn-success" value="Procesar">
+				 <input  type="submit" class="btn btn-lg btn-success" value="Process">
 				</div>
 				
 			 </form>

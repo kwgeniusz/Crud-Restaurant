@@ -8,20 +8,20 @@
 	
         <div class="col-md-8 col-md-offset-1">
 			@include('food.partials.error')
-		    <a href=" {{Route('home') }} " class="btn btn-info pull-right">Menu Principal</a>
+		    <a href=" {{Route('home') }} " class="btn btn-info pull-right">Return</a>
             <div class="panel panel-default">
 			<br><br>
-			<h2>Elige Ingredientes Para Receta</h2>
+			<h2>Choose Ingredients for Recipe</h2>
               <form class="">
 			  
 			  	{{csrf_field()}}
 				  <div class="form-group">
-					<label for="nameRecipe">Nombre de la Receta:</label>
+					<label for="nameRecipe">Recipe Name:</label>
 					<input v-model="nameRecipe" type="text" name="nameRecipe" class="form-control"/>
 				   </div>
 				
 			    <div class="form-group">
-               <label for="idFood">Ingredientes:</label>
+               <label for="idFood">Ingredients:</label>
 			   <select v-model="idFood" v-on:change="checkWeight(idFood)" class="form-control" name="idFood">
 				@foreach($foods as $food)
 					 <option value="{{$food->idFood}}">{{$food->name}}</option>
@@ -35,21 +35,21 @@
 				</div>
 			-->
 				 <div class="form-group">
-				 <label for="requiredQuantity">Cantidad Requerida:</label>
+				 <label for="requiredQuantity">Required Quantity:</label>
 				 <input v-model="requiredQuantity" type="number" name="requiredQuantity" class="form-control"/>
 				</div>
 				
 				 <div class="form-group col-lg-offset-5">
-				 <input v-on:click="aggFood(idFood,nameFood,requiredQuantity)" type="button" class="btn btn-lg btn-warning" value="Agregar Ingrediente">
+				 <input v-on:click="aggFood(idFood,nameFood,requiredQuantity)" type="button" class="btn btn-lg btn-warning" value="Add Ingredient">
 			
-				 <button class="btn btn-lg btn-danger" type="button" v-on:click="removeFood(plates)">Remover</button>
+				 <button class="btn btn-lg btn-danger" type="button" v-on:click="removeFood(plates)">Remove</button>
 				</div>
 				
 				<table class="table table-hover table-striped">
                     <tr>
 						<th>ID</th>
-						<th>Ingrediente</th>
-						<th>Cantidad</th>
+						<th>Ingredient</th>
+						<th>Quantity</th>
 					</tr>
 					<tr v-for="recipes in recipe">
 						<td>@{{recipes.id}} </td>
@@ -58,7 +58,7 @@
 					</tr>
 
 				 </table>
-				 <input v-if="recipe.length >= 2 && nameRecipe.trim()" v-on:click="processRecipe()" type="button" class="btn btn-lg btn-success" value="Crear Receta">
+				 <input v-if="recipe.length >= 2 && nameRecipe.trim()" v-on:click="processRecipe()" type="button" class="btn btn-lg btn-success" value="Create Recipe">
 			 </form>
 	  
             </div>

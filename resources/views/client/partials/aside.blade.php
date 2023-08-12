@@ -1,5 +1,5 @@
 
  <p class="alert alert-info">
-  Desde aqui podemos crear, modificar, y eliminar Clientes
- </p>
+    From here we can create, modify and delete Customers
+    </p>
 

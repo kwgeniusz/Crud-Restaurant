@@ -5,15 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Restaurante</title>
+        <title>Restaurant</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/png" href="{{ asset('/image/kitchen.png') }}">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url("image/texture.jpg");
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -50,15 +51,18 @@
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
+                color: black;
+                padding: 50px 25px;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                background: greenyellow;
             }
-
+            h1{
+                 color: black;
+            }
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -69,17 +73,18 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">Inicio</a>
+                        <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Iniciar Sesion</a>
-                        <a href="{{ url('/register') }}">Registrarse</a>
+                        <a href="{{ url('/login') }}">Log in</a>
+                        <a href="{{ url('/register') }}">Sign up</a>
                     @endif
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    CRUD en Laravel
+                <div class="">
+                    <h1>Restaurant Kitchen Management System</h1>
+                    <img src="{{URL::asset('/image/home.jpg')}}" alt="" width="50%" height="50%">
                 </div>
 
               

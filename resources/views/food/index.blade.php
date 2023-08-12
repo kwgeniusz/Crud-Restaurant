@@ -5,20 +5,20 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-1">
             <div class="panel panel-default">
-				<a href=" {{Route('home') }} " class="btn btn-info pull-right">Regresar</a>
-		  <a href=" {{Route('food.create') }} " class="btn btn-primary pull-right">Nuevo</a>
-	            <h2>Listado de Alimentos En Almacen</h2>
+				<a href=" {{Route('home') }} " class="btn btn-info pull-right">Return</a>
+		  <a href=" {{Route('food.create') }} " class="btn btn-primary pull-right">Add</a>
+	            <h2>General Storehouse > List of Food in stock</h2>
 	            
 				@include('food.partials.info')
 		      <table class="table table-hover table-striped" >
 			   <thead>
 			    <tr>
 			      <th>ID</th>
-				   <th>Nombre</th>
-				    <th>Tipo</th>
-					 <th>Peso</th>
-					 <th>Precio Costo</th>
-					  <th colspan="2">Acciones</th>
+				   <th>Name</th>
+				    <th>Type</th>
+					 <th>Weight</th>
+					 <th>Cost Price</th>
+					  <th colspan="2">Actions</th>
 			    </tr>
 			   </thead>
 			   <tbody>
@@ -31,13 +31,13 @@
 				     <td> {{ $food->weight }} </td>
 				     <td> {{ $food->price }} </td>	
 					 
-           		     <td> <a class="btn btn-link" href=" {{Route('food.edit',$food->idFood) }} ">Editar</a> </td>
+           		     <td> <a class="btn btn-link" href=" {{Route('food.edit',$food->idFood) }} ">Edit</a> </td>
 				     <td> 
                       <form action="{{Route('food.destroy',$food->idFood) }} " method="POST">
 						    
 						  {{ csrf_field() }}
 					   <input type="hidden" name="_method" value="DELETE">
-					   <button class="btn btn-link">Eliminar</button>
+					   <button class="btn btn-link">Delete</button>
 					  </form>
 					 </td>
 			
