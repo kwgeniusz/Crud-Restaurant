@@ -63,8 +63,6 @@ To run this project, you will need to add the following environment variables to
 `PUSHER_APP_KEY=`
 `PUSHER_APP_SECRET=`
 
-
-
 ## Deployment
 
 To deploy this project run
@@ -82,22 +80,22 @@ Password: admin
 - Home 
 ![img](1.png)
 
--
+- Login
 ![img](2.png)
 
--
+- Welcome
 ![img](3.png)
 
--
-![img](4.png)
+- Customers
+![img](4..png)
 
--
+- General Storehouse
 ![img](5.png)
 
--
+-Recipe
 ![img](6.png)
 
--
+-Kitchen
 ![img](7.png)
 
 - Entity Relationship Diagram
